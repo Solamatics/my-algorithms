@@ -3,7 +3,7 @@
 //they will be placed. To be a senior, a member must be at least 55 years old and have a handicap greater than 7.
 // In this croquet club, handicaps ranges from -2 to +26; the better the player the lower the handicap.
 
-//function
+//function 
 const openOrSenior = (data) => {
     return data.map((item) => {
         if(item[0] >= 55 && item[1] > 7) {
@@ -15,5 +15,11 @@ const openOrSenior = (data) => {
 };
 
 
-console.log(openOrSenior([[100, 70], [45, 6]]));
+
+
+//second solution 
+const newOpenOrSenior = data => data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open')
+
+console.log(newOpenOrSenior ([[100, 70], [45, 6]]));
+
 
