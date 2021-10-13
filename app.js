@@ -19,8 +19,7 @@ const openOrSenior = (data) => {
 
 //second solution 
 const newOpenOrSenior = data => data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open')
-
-console.log(newOpenOrSenior ([[100, 70], [45, 6]]));
+//console.log(newOpenOrSenior ([[100, 70], [45, 6]]));
 
 
 //object destructuring
@@ -30,8 +29,40 @@ let details = {
     job: "Developer"
 }
 
+const user = { 
+    'name': 'Alex',
+    'address': '15th Park Avenue',
+    'age': 43,
+    'department':{
+        'name': 'Sales',
+        'Shift': 'Morning',
+        'address': {
+            'city': 'Bangalore',
+            'street': '7th Residency Rd',
+            'zip': 560001
+        }
+    }
+}
+
+//destructure user
+const { department: { address: { street } } } = user;
+
+//get dynamic name property
+const getKeyValue = key => {
+    const { [key]: returnValue } = user;
+    return returnValue;
+}
+
 const { name, job, age } = details;
 
-console.log(`My name is ${name}, I am ${age} and I work as a ${job}`);
+
+//array destructuring
+const itemsNeed = ["Paste", "Bread", "Butter", "Battery"];
+
+let [ basic, need ] = itemsNeed;
+
+//console.log(`My name is ${name}, I am ${age} and I work as a ${job}`);
+//console.log(getKeyValue("department"))
+console.log(basic, need);
 
 
