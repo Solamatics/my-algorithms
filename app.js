@@ -23,3 +23,15 @@ const newOpenOrSenior = data => data.map(([age, handicap]) => (age > 54 && handi
 console.log(newOpenOrSenior ([[100, 70], [45, 6]]));
 
 
+//object destructuring
+let details = {
+    name: "Olusola Afikode",
+    age: 29,
+    job: "Developer"
+}
+
+const { name, job, age } = details;
+
+console.log(`My name is ${name}, I am ${age} and I work as a ${job}`);
+
+
