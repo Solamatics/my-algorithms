@@ -63,6 +63,3 @@ let [ basic, need ] = itemsNeed;
 
 //console.log(`My name is ${name}, I am ${age} and I work as a ${job}`);
 //console.log(getKeyValue("department"))
-console.log(basic, need);
-
-
