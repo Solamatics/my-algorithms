@@ -30,3 +30,9 @@ function diffArray(arr1, arr2) {
 
     return newArray;
 }
+
+//seek and destroy
+function destroyer(arr) {
+    let valsToRemove = Object.values(arguments).slice(1);
+    
+}
