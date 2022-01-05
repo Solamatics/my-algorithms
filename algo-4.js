@@ -18,3 +18,19 @@ const numberOfVowels = (str) => {
 };
 
 console.log(numberOfVowels("pandemonium"));
+
+//the above algorithm can also be solved using regular expression:
+
+const getCount = (str) => {
+    let vowelCount = 0;
+
+    for(const letter of str) {
+        if(letter.match(/[aeiou]/g)) {
+            vowelCount++;
+        }
+    }
+
+    return vowelCount;
+}
+
+console.log(getCount('vancouver'));
