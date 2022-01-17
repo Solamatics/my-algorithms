@@ -41,4 +41,27 @@ const reverseString = (str) => {
   },'');
 };
 
-console.log(reverseString("olusola"));
+// console.log(reverseString("olusola"));
+
+
+//confirming a palindrome
+const isPalindrome = str => {
+    let reverseWord = str.split('').reduce((reverseStr, char) => char + reverseStr, '');
+    
+    return reverseWord === str;
+}
+
+;
+
+
+//reverse an Integer
+
+const reverseInt = int => {
+    const revString = int.toString().split('').reverse().join('');
+
+    return parseInt(revString) * Math.sign(int)
+}
+
+const output = reverseInt("-12345");
+
+console.log(output)
