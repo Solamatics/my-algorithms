@@ -38,30 +38,48 @@ const reverseString = (str) => {
 
   return str.split("").reduce((revString, char) => {
     return char + revString;
-  },'');
+  }, "");
 };
 
 // console.log(reverseString("olusola"));
 
-
 //confirming a palindrome
-const isPalindrome = str => {
-    let reverseWord = str.split('').reduce((reverseStr, char) => char + reverseStr, '');
-    
-    return reverseWord === str;
-}
+const isPalindrome = (str) => {
+  let reverseWord = str
+    .split("")
+    .reduce((reverseStr, char) => char + reverseStr, "");
 
-;
-
+  return reverseWord === str;
+};
 
 //reverse an Integer
 
-const reverseInt = int => {
-    const revString = int.toString().split('').reverse().join('');
+const reverseInt = (int) => {
+  const revString = int.toString().split("").reverse().join("");
 
-    return parseInt(revString) * Math.sign(int)
-}
+  return parseInt(revString) * Math.sign(int);
+};
 
-const output = reverseInt("-12345");
+//return a string with the first letter of every word capitalized
 
-console.log(output)
+const capitalizeLetters = (str) => {
+  // const strArr = str.toLowerCase().split(' ');
+  // for(i = 0; i < strArr.length; i++) {
+  //     strArr[i] = strArr[i].substring(0, 1).toUpperCase() + strArr[i].substring(1);
+  // }
+  // return strArr.join(' ')
+
+  //using map method
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.substring(1))
+    .join(" ");
+
+  //using regex
+  //   return str.replace(/\b[a-z]/gi, char => char.toUpperCase())
+};
+
+const output = capitalizeLetters("I am Olusola");
+
+console.log(output);
