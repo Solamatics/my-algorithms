@@ -80,6 +80,24 @@ const capitalizeLetters = (str) => {
   //   return str.replace(/\b[a-z]/gi, char => char.toUpperCase())
 };
 
-const output = capitalizeLetters("I am Olusola");
+
+
+//Challenge 6: FIZZBUZZ
+//Write a program that prints all the numbers from 1 tp 100. FOr multiples of 3
+//instead of the number, print 'Fizz", for multiples of 5 print "Buzz'. For numbers
+//which  are multiples of both 3 and 5, print "Fizbuzz"
+
+const fizzBuzz = () => {
+  for(let i = 0; i <=100; i++) {
+    if(i % 15 === 0) {
+      console.log('FizzBuzz')
+    } else if(i % 5 === 0) {
+      console.log('Fizz')
+    } else if(i % 3 === 0)console.log('Buzz')
+  } 
+}
+
+const output = fizzBuzz();
+
 
 console.log(output);
