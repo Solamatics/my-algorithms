@@ -1,5 +1,5 @@
 //CHALLENGE 5: MAX Character
-//retur the character that is most commnon in a string
+//return the character that is most commnon in a string
 
 const maxCharacter = (str) => {
   const charMap = {};
