@@ -6,23 +6,28 @@ const returnYearCentury = (year) => Math.floor((year - 1) / 100) + 1;
 
 // console.log(returnYearCentury(1999));
 
-function solution(inputString) {
-  let reversedWord = "";
-  let letters = [];
+// function solution(inputString) {
+//   let reversedWord = "";
+//   let letters = [];
 
-  for (let i = 0; i < inputString.length; i++) {
-    letters.push(inputString[i]);
-  }
+//   for (let i = 0; i < inputString.length; i++) {
+//     letters.push(inputString[i]);
+//   }
 
-  for (let i = 0; i <inputString.length; i++) {
-      reversedWord += letters.pop();
-  }
+//   for (let i = 0; i <inputString.length; i++) {
+//       reversedWord += letters.pop();
+//   }
 
-  if (inputString === reversedWord) {
-    return true;
-  } else {
-    return false;
-  }
-}
+//   if (inputString === reversedWord) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-console.log(solution("raceca"));
+const solution = (str) => {
+  const reversedString = str.split("").reverse().join("");
+  return str === reversedString;
+};
+
+console.log(solution("racecar"));
